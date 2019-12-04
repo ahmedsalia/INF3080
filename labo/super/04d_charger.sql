@@ -1,4 +1,6 @@
-
+-- 04d 
+-- 04e
+-- 
 DECLARE
  i NUMBER;
  j NUMBER;
@@ -17,7 +19,7 @@ BEGIN
  END LOOP;
  COMMIT;
  x := 0;
- FOR i IN 1..1000 LOOP
+ FOR i IN 1..100 LOOP
    SELECT MIN(pEmploye), MAX(pEmploye) INTO a, b FROM Employe;
    FOR k IN a..b LOOP
      x := x + 1;
@@ -26,3 +28,4 @@ BEGIN
  END LOOP;
  COMMIT;
 END;
+/
