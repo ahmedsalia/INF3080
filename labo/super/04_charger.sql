@@ -1,0 +1,13 @@
+@/home/df991372/inf3080/super/04_charger/04j_charger.sql
+@/home/df991372/inf3080/super/04_charger/04i_charger.sql
+@/home/df991372/inf3080/super/04_charger/04h_charger.sql
+@/home/df991372/inf3080/super/04_charger/04k_charger.sql
+@/home/df991372/inf3080/super/04_charger/04l_charger.sql
+@/home/df991372/inf3080/super/04_charger/04m_charger.sql
+@/home/df991372/inf3080/super/04_charger/04e_charger.sql
+@/home/df991372/inf3080/super/04_charger/04g_charger.sql
+@/home/df991372/inf3080/super/04_charger/04b_charger.sql
+@/home/df991372/inf3080/super/04_charger/04a_charger.sql
+@/home/df991372/inf3080/super/04_charger/04f_charger.sql
+@/home/df991372/inf3080/super/04_charger/04d_charger.sql
+@/home/df991372/inf3080/super/04_charger/04c_charger.sql
