@@ -4,7 +4,9 @@ j NUMBER;
 v VARCHAR2(30);
 n INTEGER;
 a NUMBER;
-n pls_integer;
+k NUMBER;
+ b NUMBER;
+ x NUMBER;
 
 BEGIN
     DELETE FROM Machine;
@@ -18,10 +20,28 @@ BEGIN
     DELETE FROM Site;
     COMMIT;
     SELECT MIN(pVille) INTO a FROM ville;
-    INSERT INTO Site (pSite, cAdresse, pVille) VALUES (1, 'adresse a Armand', a);
     INSERT INTO Revision (pRevision, cRevision, cNote, dRevision) VALUES (1, 'Revision1', 'Grosse note', TO_DATE('1999-09-12', 'YYYY-MM-DD'));
-    INSERT INTO Modele (pModele, cModele, cNote, dFinVie) VALUES (1, 'Le modele a Armand', 'Petite note' , TO_DATE('2001-01-01', 'YYYY-MM-DD'));
-    INSERT INTO TypeMachine (pTypeMachine, cTypeMachine, bOption) VALUES (1, 'Le type moche de Alexis', 0);
+
+FOR i IN 1..5
+LOOP
+INSERT INTO typeMachine (pTypeMachine, cTypeMachine, bOption) VALUES (i, 'typeMachine' || i, MOD(i,2));
+INSERT INTO modele (pModele, cModele, dFinVie ) VALUES (i, 'modele' || i, SYSDATE + i);
+END LOOP;
+COMMIT;
+
+SELECT MIN(pVille), MAX(pVille) INTO a, b FROM ville;
+x := a;
+
+FOR i IN 1..15000
+LOOP
+    INSERT INTO Site (pSite, cAdresse, pVille) VALUES (i, i*22 || 'rue des Arbres', x );
+    IF x = b THEN
+        x := a;
+    ELSE  
+        x := (x+1);
+    END IF;
+END LOOP;
+
     
     FOR j IN 1..50000 LOOP
         IF MOD(j,2) = 0 THEN
