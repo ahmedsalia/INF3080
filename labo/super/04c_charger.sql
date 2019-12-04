@@ -2,6 +2,7 @@ DECLARE
  i NUMBER;
  k NUMBER;
  a NUMBER;
+ b NUMBER;
  j NUMBER;
  x NUMBER;
  p NUMBER;
