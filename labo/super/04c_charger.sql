@@ -14,8 +14,8 @@ BEGIN
  COMMIT;
  x := 0;
  j:= 0 ;
- SELECT MIN(pServiceE), MAX(pServiceE) INTO a, b FROM pServiceE;
-  SELECT MIN(pMachine), MAX(pMachine) INTO y, z FROM pMachine;
+ SELECT MIN(pServiceE), MAX(pServiceE) INTO a, b FROM ServiceE;
+  SELECT MIN(pMachine), MAX(pMachine) INTO y, z FROM Machine;
  FOR i IN 1..500 LOOP
    FOR k IN 1..10 LOOP
      x := x + 1;
