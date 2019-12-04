@@ -2,7 +2,7 @@
 --@04i_charger.sql
 @04h_charger.sql
 @04mk_charger.sql
-@04l_charger.sql
+--@04l_charger.sql
 --@04m_charger.sql
 @04e_charger.sql
 @04g_charger.sql
