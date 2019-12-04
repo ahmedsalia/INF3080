@@ -1,5 +1,5 @@
-@04j_charger.sql
-@04i_charger.sql
+--@04j_charger.sql
+--@04i_charger.sql
 @04h_charger.sql
 @04k_charger.sql
 @04l_charger.sql
