@@ -19,9 +19,9 @@ BEGIN
  FOR i IN 1..500 LOOP
    FOR k IN 1..10 LOOP
      x := x + 1;
-     j := DBMS_RANDOM.VALUES(10 , 52);
-     p := DBMS_RANDOM.VALUES(a , b);
-     o := DBMS_RANDOM.VALUES(y , z);
+     j := DBMS_RANDOM.VALUE(10 , 52);
+     p := DBMS_RANDOM.VALUE(a , b);
+     o := DBMS_RANDOM.VALUE(y , z);
      INSERT INTO ServiceD (pServiceD, cDescription, nDuree, pMachine,pServiceE) VALUES (x, 'service', j,p,o);
    END LOOP;
  END LOOP;
