@@ -23,7 +23,7 @@ BEGIN
    SELECT MIN(pEmploye), 50 INTO a, b FROM Employe;
    FOR k IN a..b LOOP
      x := x + 1;
-     INSERT INTO ServiceE (pServiceE, dServiceE, pEmploye) VALUES (x, TO_DATE('2015-06-12' , 'YYYY-MM-DD'), k);
+     INSERT INTO ServiceE (pServiceE, dServiceE, pSite, pEmploye) VALUES (x, TO_DATE('2015-06-12' , 'YYYY-MM-DD'), k, k);
    END LOOP;
  END LOOP;
  COMMIT;
