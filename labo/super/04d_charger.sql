@@ -1,6 +1,6 @@
--- 04d 
--- 04e
--- 
+-- 04d Site
+-- a completer avec des randoms sur employe et site
+-- script a revoir
 DECLARE
  i NUMBER;
  j NUMBER;
