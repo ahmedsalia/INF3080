@@ -1,3 +1,8 @@
+-- ATTENTION 
+-- a revoir
+-- script efface trop de choses... modele et typemachine il faut corriger.
+-- probleme de stabilité.. le script ne valide pas la presences des clés utilisés.
+
 DECLARE
 i NUMBER;
 j NUMBER;
@@ -15,10 +20,10 @@ x NUMBER;
 BEGIN
     DELETE FROM Machine;
     COMMIT;
-    DELETE FROM TypeMachine;
-    COMMIT;
-    DELETE FROM Modele;
-    COMMIT;
+    --DELETE FROM TypeMachine;
+    --COMMIT;
+    --DELETE FROM Modele;
+    --COMMIT;
     DELETE FROM Revision;
     COMMIT;
     DELETE FROM Site;
@@ -36,6 +41,7 @@ BEGIN
     x := a;
 
     FOR i IN 1..15000 LOOP
+        -- necessite des corrections.
         INSERT INTO Site (pSite, cAdresse, pVille) VALUES (i, i*22 || 'rue des Arbres', x );
         IF x = b THEN
             x := a;
@@ -46,16 +52,18 @@ BEGIN
     COMMIT;
     
     FOR j IN 1..50000 LOOP
+        --TRES BIEN le MODULO.. BRAVO encore.
         IF MOD(j,2) = 0 THEN
             v := 'Tres grosse machine';
         ELSE
             v := 'Petite machine';
         END IF;
-
+        --BRAVO pour CECI ... je suis fier de vous!
         n := dbms_random.value(1000000000,2147483647);
         pmod := dbms_random.value(1, 5);
         pty  := dbms_random.value(1, 5);
         psi  := dbms_random.value(1, 15000);
+        --aucun machine active... dommage!                                                   
         INSERT INTO Machine (pMachine, cMachine, bActif, cSerie, dInstallation, pModele, pRevision, pTypeMachine, pSite) 
         VALUES (j, v, 0, TO_CHAR(n), TO_DATE('1999-09-12', 'YYYY-MM-DD'), pmod, 1, pty, psi);
     END LOOP;
