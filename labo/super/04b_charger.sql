@@ -1,3 +1,5 @@
+-- PROCEDURE invalide.
+
 Begin
 Delete FROM Detaillant;
 Commit;
