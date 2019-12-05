@@ -7,8 +7,8 @@ DECLARE
         DELETE FROM Modele;
         COMMIT;
         FOR j IN 1..5 LOOP
-            IF MOD(j, 2) THEN 
-              d := systdate + 1000;
+            IF MOD(j, 2) = 0 THEN 
+              d := sysdate + 1000;
             ELSE
               d := NULL;
             END IF;
