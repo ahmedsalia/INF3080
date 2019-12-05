@@ -8,7 +8,7 @@
 --@04g_charger.sql (n,exsite pas)
 @04b_charger.sql (non fonctionnelle)
 @04f_charger.sql (inclus f, g et l ) a revoir danger avec ville, ne pas effacer (modele et typemachine)!
-@04d_charger.sql
-@04c_charger.sql
+@04d_charger.sql (A revoir completement, n'est pas sécuritaire, vérifier les clés etrangères)
+@04c_charger.sql (est-ce fonctionnel ?)
 --
 @04a_charger.sql (a faire)
