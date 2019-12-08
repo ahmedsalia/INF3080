@@ -57,10 +57,11 @@ Modèle entité-association. Modèle relationnel. Algèbre relationnelle et lang
 
 #### Examens
  - Examen Intra (#1) : 30%, 26 octobre 2019 de 14:00 à 17:00
-   + **PK1350** [ AAAA @ LAMA ]
-   + **PK1630** [ LEYN @ ZZZZ ]
+   + **PK-1350** [ AAAA @ LAMA ]
+   + **PK-1630** [ LEYN @ ZZZZ ]
  - Examen Final (#2) : 30%, 14 décembre 2019 de 14:00 à 17:00
-   + **à venir**
+   + **PK-R310** [ AAAA @ LAMO ]
+   + **PK-2205** [ LOUL @ ZZZZ ]
 
 ##### Directives aux examens
  + Avoir votre carte d'étudiant UQAM valide;
@@ -98,6 +99,8 @@ Modèle entité-association. Modèle relationnel. Algèbre relationnelle et lang
    + [Oracle Database Doc 11g v11.2](https://docs.oracle.com/cd/E11882_01/nav/portal_4.htm)
    + [SQL*plus Quick Reference 11g v11.2](https://docs.oracle.com/cd/E11882_01/server.112/e16605/toc.htm#i772678)
  - [SQL Loader par Vanish Kapoor (2018)](https://www.foxinfotech.in/2018/07/using-sql-loader-in-oracle-to-import-csv-file.html)
+ - [connexion JDBC](https://razorsql.com/docs/help_oracle.html)
+ - [Architecture de Oracle Net services](https://docs.oracle.com/cd/B28359_01/network.111/b28316/architecture.htm#NETAG208)
  - Robert Godin, UQAM, Professeur
  
  ---
