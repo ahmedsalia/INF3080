@@ -3,27 +3,24 @@
 -- script a revoir
 DECLARE
  i NUMBER;
- j NUMBER;
- k NUMBER;
  a NUMBER;
  b NUMBER;
  x NUMBER;
+ z1 NUMBER;
+ z2 NUMBER;
+ p NUMBER;
+ q NUMBER;
  
 BEGIN
- --DELETE FROM Site;
- --COMMIT;
- --DELETE FROM Employe;
- --COMMIT;
- --FOR j IN 1..50 LOOP
- --  INSERT INTO Employe  VALUES (j, TO_CHAR(j) || 'Employe');
- --END LOOP;
- --COMMIT;
+ DELETE FROM pServieE;
  x := 0;
- FOR i IN 1..100 LOOP
-   SELECT MIN(pEmploye), 50 INTO a, b FROM Employe;
-   FOR k IN a..b LOOP
+ SELECT MIN(pEmploye), MAX(pEmploye) INTO a, b FROM Employe;
+ SELECT MIN(pSite),MAX(pSite) INTO p, q FROM Site;
+ FOR i IN 1..5000 LOOP
      x := x + 1;
-     INSERT INTO ServiceE (pServiceE, dServiceE, pSite, pEmploye) VALUES (x, TO_DATE('2015-06-12' , 'YYYY-MM-DD'), k, k);
+     z1 := DBMS_RANDOM.VALUE(a,b);
+     z2 := DBMS_RANDOM.VALUE(p,q)
+     INSERT INTO ServiceE (pServiceE, dServiceE, pSite, pEmploye) VALUES (x, TRUNC(SYSDATE + DBMS_RANDOM.value(0,366), z2, z1);
    END LOOP;
  END LOOP;
  COMMIT;
