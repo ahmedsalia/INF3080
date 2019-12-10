@@ -1,6 +1,5 @@
 DECLARE
  i NUMBER;
- k NUMBER;
  a NUMBER;
  b NUMBER;
  j NUMBER;
@@ -17,8 +16,7 @@ BEGIN
  j:= 0 ;
  SELECT MIN(pServiceE), MAX(pServiceE) INTO a, b FROM ServiceE;
   SELECT MIN(pMachine), MAX(pMachine) INTO y, z FROM Machine;
- FOR i IN 1..500 LOOP
-   FOR k IN 1..10 LOOP
+ FOR i IN 1..5000 LOOP
      x := x + 1;
      j := DBMS_RANDOM.VALUE(10 , 52);
      p := DBMS_RANDOM.VALUE(a , b);
@@ -29,4 +27,3 @@ BEGIN
  COMMIT;
 END;
 /
-SELECT COUNT(*) FROM SERVICED;
